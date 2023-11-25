@@ -22,6 +22,7 @@ import {FormsModule} from "@angular/forms";
 import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {MatInputModule} from "@angular/material/input";
     HeaderComponent,
     ParkingLotComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
