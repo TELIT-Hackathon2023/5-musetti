@@ -1,24 +1,29 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatToolbarModule} from "@angular/material/toolbar";
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { ContentComponent } from './content/content.component';
+import { ParkingSpotComponent } from './parking-spot/parking-spot.component';
+import { ParkingLotComponent } from './parking-lot/parking-lot.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    ContentComponent,
+    ParkingSpotComponent,
+    ParkingLotComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule
+    AppRoutingModule
+    // Add any additional modules you might need here
   ],
-  providers: [
-    provideClientHydration()
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

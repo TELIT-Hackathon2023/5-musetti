@@ -1,0 +1,7 @@
+/* parking-lot.component.css */
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
