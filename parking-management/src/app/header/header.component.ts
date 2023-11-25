@@ -1,6 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from "rxjs";
 import {AuthService} from "../auth.service";
+import {LoginComponent} from "../login/login.component";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -12,13 +14,33 @@ export class HeaderComponent  implements OnInit, OnDestroy{
   private authSubscription?: Subscription;
   isLoggedIn: boolean = false;
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
     this.authSubscription = this.authService.isLoggedIn.subscribe(user => {
       this.isLoggedIn = !!user;
     });
   }
+
+  onLoginClick(): void {
+    // Additional logic here if needed
+    this.router.navigate(['/login']).then(r => {});
+  }
+
+  async onLogout() {
+    try {
+      await this.authService.logout();
+      // Handle post-logout logic, like redirecting to the home page
+    } catch (error) {
+      // Handle errors, such as displaying an error message
+    }
+  }
+
+  onRegisterClick(): void {
+    // Additional logic here if needed
+    this.router.navigate(['/register']).then(r => {});
+  }
+
 
   ngOnDestroy() {
     if (this.authSubscription) {
