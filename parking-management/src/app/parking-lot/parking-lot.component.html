@@ -1,0 +1,14 @@
+<div class="parking-lot">
+  <div *ngFor="let spot of parkingSpots" class="parking-spot" [class.occupied]="spot.occupied" (mouseover)="onSelectSpot(spot)">
+    Spot {{ spot.id }}
+  </div>
+</div>
+
+<div *ngIf="selectedSpot" class="spot-details">
+  <p>Selected Spot ID: {{ selectedSpot.id }}</p>
+  <p>Status: {{ selectedSpot.occupied ? 'Occupied' : 'Free' }}</p>
+  <div *ngIf="selectedSpot.occupied">
+    <p>email: {{ selectedSpot.email }}</p>
+    <p>registration number: {{ selectedSpot.registration_num }}</p>
+  </div>
+</div>

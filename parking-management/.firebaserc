@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "parking-system-management": {
+      "hosting": {
+        "parking-management": [
+          "parking-system-management"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "parking-system-management"
+  }
+}

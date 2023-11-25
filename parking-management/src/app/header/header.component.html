@@ -1,0 +1,20 @@
+<mat-toolbar class="mat-primary">
+  <mat-toolbar-row>
+    <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+    <span> Parking management system </span>
+    <span class="example-spacer"></span>
+    <mat-menu #menu="matMenu">
+      <div *ngIf="isLoggedIn">
+        <button mat-menu-item>My bookings</button>
+        <button mat-menu-item>Profile information</button>
+        <button mat-menu-item>Preferences</button>
+        <button mat-menu-item>Notifications</button>
+      </div>
+      <div *ngIf="!isLoggedIn">
+        <button mat-menu-item>Login</button>
+        <button mat-menu-item>Register</button>
+      </div>
+    </mat-menu>
+
+  </mat-toolbar-row>
+</mat-toolbar>
