@@ -9,25 +9,22 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { HeaderComponent } from './header/header.component';
 import { ParkingLotComponent } from './parking-lot/parking-lot.component';
-import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatMenuModule} from "@angular/material/menu";
-import {MatIconModule} from "@angular/material/icon";
-import {MatButtonModule} from "@angular/material/button";
-import {AngularFireModule} from "@angular/fire/compat";
-import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
-import {environment} from "../environment";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatMenuModule } from "@angular/material/menu";
+import { MatIconModule } from "@angular/material/icon";
+import { MatButtonModule } from "@angular/material/button";
+import { AngularFireModule } from "@angular/fire/compat";
+import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
+import { environment } from "../environment";
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
-import {FormsModule} from "@angular/forms";
-import {MatCardModule} from "@angular/material/card";
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatInputModule} from "@angular/material/input";
-<<<<<<< HEAD
-import { FooterComponent } from './footer/footer.component';
-=======
+import { FormsModule } from "@angular/forms";
+import { MatCardModule } from "@angular/material/card";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
 import { ProfileComponent } from './profile/profile.component';
 import { BookingDialogComponent } from './booking-dialog/booking-dialog.component';
->>>>>>> cde192fbb167d5deba898b2c1c483a98ac836a48
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -36,26 +33,15 @@ import { BookingDialogComponent } from './booking-dialog/booking-dialog.componen
     ParkingLotComponent,
     LoginComponent,
     RegistrationComponent,
-<<<<<<< HEAD
-    FooterComponent
-=======
+    FooterComponent,
     ProfileComponent,
     BookingDialogComponent
->>>>>>> cde192fbb167d5deba898b2c1c483a98ac836a48
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    provideFirebaseApp(() => initializeApp({
-      "projectId": "parking-system-management",
-      "appId": "1:90470793889:web:f9e0119ed13c92fd68e6e0",
-      "storageBucket": "parking-system-management.appspot.com",
-      "apiKey": "AIzaSyCIxlJc_1N0UBFrRy-_NhidPB2FFRIr040",
-      "authDomain": "parking-system-management.firebaseapp.com",
-      "messagingSenderId": "90470793889",
-      "measurementId": "G-KNC7BB0YRJ"
-    })),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     MatToolbarModule,

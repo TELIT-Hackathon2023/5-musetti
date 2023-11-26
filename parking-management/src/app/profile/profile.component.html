@@ -1,12 +1,23 @@
-<mat-card>
-  <mat-card-title>Edit Profile</mat-card-title>
-  <mat-card-content>
-    <form (ngSubmit)="updateProfile()">
-      <mat-form-field appearance="fill">
-        <mat-label>License Plate Number</mat-label>
-        <input matInput [(ngModel)]="userProfile.license_plate" name="license_plate" required>
-      </mat-form-field>
-      <button mat-raised-button color="primary" type="submit">Update</button>
-    </form>
-  </mat-card-content>
-</mat-card>
+<!-- edit-profile.component.html -->
+<div class="full-page-div">
+  <div class="container mt-5">
+    <div class="card" style="max-width: 400px; margin: 0 auto; margin-bottom: 20px;">
+        <div class="card-style">
+          <div class="card-header ">
+            <h5 class="card-title">Edit Profile</h5>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="updateProfile()">
+              <div class="mb-3">
+                <label for="licensePlate" class="form-label">License Plate Number</label>
+                <input type="text" class="form-control" id="licensePlate" [(ngModel)]="userProfile.license_plate" name="license_plate" required>
+              </div>
+              <button class="btn magenta-bg text-white" type="submit">Update</button>
+            </form>
+          </div>
+       </div>
+    </div>
+  </div>
+</div>
+
+
