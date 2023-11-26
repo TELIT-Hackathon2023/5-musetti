@@ -1,0 +1,14 @@
+.title {
+  cursor: pointer;
+}
+.my-bg{
+  background-color: #FF00FF;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  z-index: 1000; /* Set a higher z-index for the header */
+}

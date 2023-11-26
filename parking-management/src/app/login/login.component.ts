@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {AuthService} from "../auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -11,12 +12,15 @@ export class LoginComponent {
   email = '';
   password = '';
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
+
+
+
 
   login() {
     this.authService.login(this.email, this.password)
       .then(result => {
-        // Handle successful login, like redirecting to a dashboard
+        this.router.navigate(['']).then(r => {});
       })
       .catch(error => {
         // Handle login errors, such as showing an error message

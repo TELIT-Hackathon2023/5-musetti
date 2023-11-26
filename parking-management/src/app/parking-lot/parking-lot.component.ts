@@ -27,6 +27,7 @@ export class ParkingLotComponent {
         email: "example@mail.com",
         registration_num: "ke12345"
       });
+   
     }
   }
 

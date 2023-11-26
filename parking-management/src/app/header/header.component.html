@@ -1,20 +1,20 @@
-<mat-toolbar class="mat-primary">
+<mat-toolbar class="mat my-bg text-white header">
   <mat-toolbar-row>
     <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
-    <span> Parking management system </span>
+    <span class="title" routerLink=""> Parking management system </span>
     <span class="example-spacer"></span>
-    <mat-menu #menu="matMenu">
+    <mat-menu #menu="matMenu" class="mat-menu-panel">
       <div *ngIf="isLoggedIn">
         <button mat-menu-item>My bookings</button>
         <button mat-menu-item>Profile information</button>
         <button mat-menu-item>Preferences</button>
         <button mat-menu-item>Notifications</button>
+        <button mat-menu-item *ngIf="isLoggedIn" (click)="onLogout()">Logout</button>
       </div>
       <div *ngIf="!isLoggedIn">
-        <button mat-menu-item>Login</button>
-        <button mat-menu-item>Register</button>
+        <button mat-menu-item (click)="onLoginClick()" routerLink="/login">Login</button>
+        <button mat-menu-item (click)="onRegisterClick()" routerLink="/register">Register</button>
       </div>
     </mat-menu>
-
   </mat-toolbar-row>
 </mat-toolbar>

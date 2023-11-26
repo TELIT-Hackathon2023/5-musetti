@@ -28,6 +28,11 @@ export class AuthService {
       throw new Error('Email is not verified');
     }
   }
+
+  async logout() {
+    await this.afAuth.signOut();
+  }
+
   async register(email: string, password: string) {
     const result = await this.afAuth.createUserWithEmailAndPassword(email, password);
     await this.sendEmailVerification();
