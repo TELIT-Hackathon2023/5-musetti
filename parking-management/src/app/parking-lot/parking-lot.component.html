@@ -8,6 +8,7 @@
     </div>
   </div>
 
+<<<<<<< HEAD
   <div class=""> <!-- Add margin-top to create space -->
     
     <div *ngIf="selectedSpot" class="spot-details">
@@ -18,5 +19,12 @@
         <p>Registration Number: {{ selectedSpot.registration_num }}</p>
       </div>
     </div>
+=======
+<div *ngIf="selectedSpot" class="spot-details">
+  <p>Selected Spot ID: {{ selectedSpot.id }}</p>
+  <p>Status: {{ selectedSpot.occupied ? 'Occupied' : 'Free' }}</p>
+  <div *ngIf="selectedSpot.occupied">
+
+>>>>>>> cde192fbb167d5deba898b2c1c483a98ac836a48
   </div>
 </div>

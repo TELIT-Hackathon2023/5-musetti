@@ -22,7 +22,12 @@ import {FormsModule} from "@angular/forms";
 import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+<<<<<<< HEAD
 import { FooterComponent } from './footer/footer.component';
+=======
+import { ProfileComponent } from './profile/profile.component';
+import { BookingDialogComponent } from './booking-dialog/booking-dialog.component';
+>>>>>>> cde192fbb167d5deba898b2c1c483a98ac836a48
 
 @NgModule({
   declarations: [
@@ -31,7 +36,12 @@ import { FooterComponent } from './footer/footer.component';
     ParkingLotComponent,
     LoginComponent,
     RegistrationComponent,
+<<<<<<< HEAD
     FooterComponent
+=======
+    ProfileComponent,
+    BookingDialogComponent
+>>>>>>> cde192fbb167d5deba898b2c1c483a98ac836a48
   ],
   imports: [
     BrowserModule,

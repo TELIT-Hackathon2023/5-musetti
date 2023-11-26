@@ -1,0 +1,9 @@
+mat-form-field {
+  width: 100%; /* Ensure full width */
+  display: block; /* Stack the elements */
+}
+
+button {
+  width: 100%; /* Full width for the button */
+  margin-top: 20px; /* Optional: Add some space above the button */
+}
