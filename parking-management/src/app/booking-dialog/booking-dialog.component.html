@@ -1,13 +1,12 @@
 
 <div class="full-page-div">
-<div class="booking-container mt-5 container">
-
-  <div class="card" style="max-width: 370px; margin: 0 auto; margin-bottom: 20px;">
-    <div class="card-header">
-      <h4 class="card-title">Book Parking Spot {{ spotId }}</h4>
-    </div>
+  <div class="booking-container mt-5 container">
+    <div class="card" style="max-width: 370px; margin: 0 auto; margin-bottom: 20px;">
+      <div class="card-header">
+        <h4 class="card-title">Book Parking Spot {{ spotId }}</h4>
+      </div>
       <div class="card-body">
-            <form (ngSubmit)="onBookSpot()">
+        <form (ngSubmit)="onBookSpot()" class="booking-form">
 
               <!-- Start Date Picker -->
               <div class="form-field">
