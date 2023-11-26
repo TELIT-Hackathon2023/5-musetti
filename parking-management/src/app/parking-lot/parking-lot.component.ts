@@ -3,17 +3,18 @@ import {AuthService} from "../auth.service";
 import {Router} from "@angular/router";
 import {DbService} from "../db.service";
 
+
+
 export interface ParkingSpot {
-  id: string; // Assuming the ID is a string in Firebase
+  id: number;
   occupied: boolean;
-  occupant_id: string;
-  occupant_registration: string;
-  availability: string; // This will be parsed later
+  email: string;
+  registration_num: string;
 }
 export interface Booking {
   userId: string;
   spotId: number;
-  startDate: string; // You can use Date, string, or a timestamp based on your preference
+  startDate: string;
   startTime: string
   endDate: string;
   endTime: string;
@@ -43,13 +44,24 @@ export class ParkingLotComponent {
   parkingSpots: ParkingSpot[] = [];
   selectedSpot: ParkingSpot | null = null;
 
+  // ngOnInit() {
+  //   this.dbService.getParkingSpots().subscribe(spots => {
+  //     this.parkingSpots = spots.map(spot => ({
+  //       ...spot,
+  //       parsedAvailability: this.dbService.parseAvailability(spot.availability)
+  //     }));
+  //   });
+  // }
+
   ngOnInit() {
-    this.dbService.getParkingSpots().subscribe(spots => {
-      this.parkingSpots = spots.map(spot => ({
-        ...spot,
-        parsedAvailability: this.dbService.parseAvailability(spot.availability)
-      }));
-    });
+    for (let i = 1; i <= 12; i++) {
+      this.parkingSpots.push({
+        id: i,
+        occupied: Math.random() < 0.5,
+        email: "example@mail.com",
+        registration_num: "ke12345"
+      });
+    }
   }
 
 
