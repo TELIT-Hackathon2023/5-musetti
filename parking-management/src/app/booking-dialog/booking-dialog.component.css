@@ -2,11 +2,11 @@
   margin: 10vw;
 }
 
-.magenta-bg:hover{
-  background-color: #e10075 ;
-}
 .magenta-bg{
-  background-color: #FF8AFF;
+  background-color:#e10075;
+}
+.magenta-bg:hover{
+  background-color: #ec75b2;
 }
 .full-page-div {
   position: fixed;
@@ -19,3 +19,8 @@
   z-index: 1; /* Set a lower z-index for your full-page div */
 }
 
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

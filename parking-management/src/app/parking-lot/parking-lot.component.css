@@ -19,13 +19,11 @@
   cursor: pointer;
   position: relative; /* Add position relative for absolute positioning of the space div */
 }
-
-.parking-spot:hover {
-  background-color: #ff8aff;
+.magenta-bg{
+  background-color:#e10075;
 }
-
-.parking-spot.occupied {
-  background-color: #e10075;
+.magenta-bg:hover{
+  background-color: #ec75b2;
 }
 
 row-space {
@@ -34,11 +32,11 @@ row-space {
   margin-right: 2000px;
 
 }
-.magenta-bg:hover{
-  background-color:#e10075 ;
-}
 .magenta-bg{
-  background-color: #FF8AFF;
+  background-color:#e10075;
+}
+.magenta-bg:hover{
+  background-color: rgb(194, 87, 194);
 }
 .full-page-div {
   position: fixed;

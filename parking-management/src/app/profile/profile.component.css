@@ -1,10 +1,9 @@
-.magenta-bg:hover{
-  background-color: #e10075 ;
-}
 .magenta-bg{
-  background-color: #FF8AFF;
+  background-color:#e10075;
 }
-
+.magenta-bg:hover{
+  background-color: #ec75b2;
+}
 .full-page-div {
   position: fixed;
   top: 60px;
