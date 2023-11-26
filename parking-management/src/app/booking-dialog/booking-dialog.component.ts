@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {MatDialogRef} from "@angular/material/dialog";
+import {DbService} from "../db.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-booking-dialog',
@@ -8,21 +9,22 @@ import {MatDialogRef} from "@angular/material/dialog";
 })
 
 export class BookingDialogComponent {
-  startTime: number = 8; // Example start time
-  endTime: number = 10; // Example end time
 
-  constructor(public dialogRef: MatDialogRef<BookingDialogComponent>) {}
+  spotId: string | null | undefined;
+  startDate: Date | undefined;
+  endDate: Date | undefined;
+  startTime: any;
+  endTime: any;
 
-  formatLabel(value: number) {
-    return value + 'h';
+  constructor(private route: ActivatedRoute, private dbService: DbService) { }
+
+  ngOnInit() {
+    this.spotId = this.route.snapshot.paramMap.get('id'); // Get the spot ID from the route
   }
 
-  onSliderChange(event: any) {
-    // Handle slider value change
-    this.endTime = event.value;
+  onBookSpot() {
+    // Logic to book the spot using dbService
   }
 
-  get selectedPeriod() {
-    return { start: this.startTime, end: this.endTime };
-  }
+
 }

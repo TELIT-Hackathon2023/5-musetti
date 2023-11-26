@@ -35,7 +35,7 @@ export interface AvailabilityPeriod {
 
 export class ParkingLotComponent {
 
-  constructor(private dbService: DbService, private authService: AuthService) { }
+  constructor(private dbService: DbService, private authService: AuthService, private router: Router) { }
 
 
   parkingSpots: ParkingSpot[] = [];
@@ -54,6 +54,13 @@ export class ParkingLotComponent {
 
   onSelectSpot(spot: ParkingSpot): void {
     this.selectedSpot = spot;
+  }
+
+  onClickSpot(spot: ParkingSpot): void {
+    console.log(spot)
+    this.router.navigate(['/booking', spot.id]).then(r => {
+
+    }); // Navigate to the booking page with spot ID
   }
 
 

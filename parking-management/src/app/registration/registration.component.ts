@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {AuthService} from "../auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-registration',
@@ -12,12 +13,12 @@ export class RegistrationComponent {
   password = '';
   license_plate = '';
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   register() {
     this.authService.register(this.full_name, this.email, this.password, this.license_plate)
       .then(result => {
-        // Handle success, perhaps redirect or show a success message
+        this.router.navigate(['']).then(r => {});
       })
       .catch(error => {
         // Handle errors, such as showing an error message

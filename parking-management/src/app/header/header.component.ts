@@ -30,7 +30,7 @@ export class HeaderComponent  implements OnInit, OnDestroy{
   async onLogout() {
     try {
       await this.authService.logout();
-      // Handle post-logout logic, like redirecting to the home page
+      this.router.navigate(['']).then(r => {});
     } catch (error) {
       // Handle errors, such as displaying an error message
     }

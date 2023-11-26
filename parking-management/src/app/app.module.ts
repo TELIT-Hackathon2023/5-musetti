@@ -25,6 +25,8 @@ import { MatInputModule } from "@angular/material/input";
 import { ProfileComponent } from './profile/profile.component';
 import { BookingDialogComponent } from './booking-dialog/booking-dialog.component';
 import { FooterComponent } from './footer/footer.component';
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -37,24 +39,26 @@ import { FooterComponent } from './footer/footer.component';
     ProfileComponent,
     BookingDialogComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore()),
-    MatToolbarModule,
-    MatMenuModule,
-    MatIconModule,
-    MatButtonModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
-    FormsModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        MatNativeDateModule,
+        BrowserAnimationsModule,
+        provideFirebaseApp(() => initializeApp(environment.firebase)),
+        provideAuth(() => getAuth()),
+        provideFirestore(() => getFirestore()),
+        MatToolbarModule,
+        MatMenuModule,
+        MatIconModule,
+        MatButtonModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFirestoreModule,
+        FormsModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatDatepickerModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

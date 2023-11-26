@@ -37,20 +37,25 @@ export class DbService {
       map(actions => actions.map(a => {
         const data = a.payload.doc.data() as ParkingSpot;
         const id = a.payload.doc.id;
-        return { ...data };
+        return { ...data,id };
       }))
     );
   }
 
   parseAvailability(availabilityString: string): AvailabilityPeriod[] {
+    if(availabilityString === undefined){
+      return [];
+    }
     try {
       const availabilityArray = JSON.parse(availabilityString);
-      return availabilityArray.map((period: any) => ({
+      const aa = availabilityArray.map((period: any) => ({
         start: new Date(period.start),
         end: new Date(period.end),
         email: period.email,
         registration_num: period.registration_num
       }));
+
+      return aa;
     } catch (e) {
       console.error('Error parsing availability:', e);
       return [];

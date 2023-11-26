@@ -1,5 +1,5 @@
 .parking-lot {
-  margin: 5vw;
+  margin: 10vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
   gap: 10px;
