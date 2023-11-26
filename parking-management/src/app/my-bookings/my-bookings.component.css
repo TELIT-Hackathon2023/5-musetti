@@ -1,0 +1,21 @@
+.magenta-bg:hover{
+  background-color:#FF00FF ;
+}
+.magenta-bg{
+  background-color: #FF8AFF;
+}
+
+.full-page-div {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../img/cars2.png') no-repeat center center fixed;
+  background-size: cover;
+  z-index: 1;
+}
+
+button {
+  margin: 5px;
+}
