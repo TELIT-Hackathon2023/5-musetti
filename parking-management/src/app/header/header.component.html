@@ -5,9 +5,9 @@
     <span class="example-spacer"></span>
     <mat-menu #menu="matMenu">
       <div *ngIf="isLoggedIn">
+        <button mat-menu-item routerLink="">Home</button>
         <button mat-menu-item>My bookings</button>
-        <button mat-menu-item>Profile information</button>
-        <button mat-menu-item>Preferences</button>
+        <button mat-menu-item routerLink="/profile">Profile information</button>
         <button mat-menu-item>Notifications</button>
         <button mat-menu-item *ngIf="isLoggedIn" (click)="onLogout()">Logout</button>
 

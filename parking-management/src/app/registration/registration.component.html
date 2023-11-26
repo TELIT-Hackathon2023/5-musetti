@@ -3,6 +3,14 @@
   <mat-card-content>
     <form (ngSubmit)="register()">
       <mat-form-field appearance="fill">
+        <mat-label>Name and Surname</mat-label>
+        <input matInput type="full_name" [(ngModel)]="full_name" name="full_name" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>License plate number</mat-label>
+        <input matInput type="license_plate" [(ngModel)]="license_plate" name="license_plate" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
         <mat-label>Email</mat-label>
         <input matInput type="email" [(ngModel)]="email" name="email" required>
       </mat-form-field>

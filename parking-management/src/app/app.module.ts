@@ -22,6 +22,8 @@ import {FormsModule} from "@angular/forms";
 import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import { ProfileComponent } from './profile/profile.component';
+import { BookingDialogComponent } from './booking-dialog/booking-dialog.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import {MatInputModule} from "@angular/material/input";
     HeaderComponent,
     ParkingLotComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    ProfileComponent,
+    BookingDialogComponent
   ],
   imports: [
     BrowserModule,

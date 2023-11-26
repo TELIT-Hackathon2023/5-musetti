@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-title>Edit Profile</mat-card-title>
+  <mat-card-content>
+    <form (ngSubmit)="updateProfile()">
+      <mat-form-field appearance="fill">
+        <mat-label>License Plate Number</mat-label>
+        <input matInput [(ngModel)]="userProfile.license_plate" name="license_plate" required>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Update</button>
+    </form>
+  </mat-card-content>
+</mat-card>
