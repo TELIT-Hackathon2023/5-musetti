@@ -1,5 +1,5 @@
 .magenta-bg:hover{
-  background-color: #e10075 ;
+  background-color:#e10075 ;
 }
 .magenta-bg{
   background-color: #FF8AFF;
@@ -14,4 +14,8 @@
   background: url('../img/cars2.png') no-repeat center center fixed;
   background-size: cover;
   z-index: 1;
+}
+
+.notification-title {
+  font-weight: bold;
 }

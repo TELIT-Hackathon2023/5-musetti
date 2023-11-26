@@ -4,6 +4,8 @@ import {Observable} from "rxjs";
 import { User } from 'firebase/auth';
 import {AngularFireAuth} from "@angular/fire/compat/auth";
 import {AngularFirestore} from "@angular/fire/compat/firestore";
+import {AuthInstances} from "@angular/fire/auth";
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +16,11 @@ export class AuthService {
 
 
 
-  constructor(private afAuth: AngularFireAuth, private firestore: AngularFirestore) { }
+
+  constructor(private afAuth: AngularFireAuth, private firestore: AngularFirestore) {
+
+
+  }
 
   // Save user data
   saveUserData(userId: string, data: any) {
@@ -22,13 +28,9 @@ export class AuthService {
   }
 
 
-  // Retrieve user data
-  getUserData(userId: string) {
-    return this.firestore.collection('users').doc(userId).valueChanges();
-  }
-
 
   get isLoggedIn(): Observable<User | null> {
+
     return this.afAuth.authState as Observable<User | null>;
   }
 
@@ -38,6 +40,7 @@ export class AuthService {
     if (result.user && result.user.emailVerified) {
       // User is logged in and email is verified
       this.currentUserId = result.user.uid;
+      console.log(this.currentUserId)
       return result;
     } else {
       // Handle unverified email

@@ -1,0 +1,25 @@
+<div class="full-page-div">
+  <div class="container mt-5">
+    <div class="card" style="max-width: 400px; margin: 0 auto; margin-bottom: 20px;">
+      <div class="card-style">
+        <div class="card-header ">
+          <h3 class="card-title">My bookings</h3>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" *ngFor="let booking of bookings">
+            <div>
+              <h6>Booking ID: {{ booking.id }}</h6>
+              <p>Start date: {{ booking.startDate }}</p>
+              <p>Start time: {{ booking.startTime }}</p>
+              <p>End date: {{ booking.endDate }}</p>
+              <p>End time: {{ booking.endTime }}</p>
+              <button class="btn magenta-bg text-white" type="submit">Cancel</button>
+              <button class="btn magenta-bg text-white" type="submit">Edit</button>
+              <!-- Include more booking details here if needed -->
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

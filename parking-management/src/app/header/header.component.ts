@@ -22,6 +22,11 @@ export class HeaderComponent  implements OnInit, OnDestroy{
     });
   }
 
+  onBookings(): void {
+    console.log(this.authService.currentUserId)
+    this.router.navigate(['/bookings', this.authService.currentUserId]).then(r => {})
+    }
+
   onLoginClick(): void {
     // Additional logic here if needed
     this.router.navigate(['/login']).then(r => {});
@@ -39,6 +44,10 @@ export class HeaderComponent  implements OnInit, OnDestroy{
   onRegisterClick(): void {
     // Additional logic here if needed
     this.router.navigate(['/register']).then(r => {});
+  }
+
+  onNotifications(): void {
+    this.router.navigate(['/notifications', this.authService.currentUserId]).then(r => {})
   }
 
 

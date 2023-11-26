@@ -14,7 +14,9 @@ export interface Booking {
   userId: string;
   spotId: number;
   startDate: string; // You can use Date, string, or a timestamp based on your preference
+  startTime: string
   endDate: string;
+  endTime: string;
   licensePlate: string;
 }
 

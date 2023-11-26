@@ -27,6 +27,8 @@ import { BookingDialogComponent } from './booking-dialog/booking-dialog.componen
 import { FooterComponent } from './footer/footer.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
+import { MyBookingsComponent } from './my-bookings/my-bookings.component';
+import { NotificationsComponent } from './notifications/notifications.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import {MatNativeDateModule} from "@angular/material/core";
     FooterComponent,
     ProfileComponent,
     BookingDialogComponent,
-
+    MyBookingsComponent,
+    NotificationsComponent
   ],
     imports: [
         BrowserModule,

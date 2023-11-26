@@ -7,17 +7,25 @@
 
 .parking-spot {
   height: 80px;
-  background-color: #ccc;
+  background-color: #ff00ff;
   display: flex;
+  color: white;
+  font-weight: bolder;
+  font-size: medium;
   justify-content: center;
   align-items: center;
-  border: 1px solid #ddd;
+  border: 5px solid #ddd;
+  border-radius: 10px;
   cursor: pointer;
   position: relative; /* Add position relative for absolute positioning of the space div */
 }
 
+.parking-spot:hover {
+  background-color: #ff8aff;
+}
+
 .parking-spot.occupied {
-  background-color: #F44336;
+  background-color: #e10075;
 }
 
 row-space {
@@ -27,17 +35,28 @@ row-space {
 
 }
 .magenta-bg:hover{
-  background-color:#FF00FF ;
+  background-color:#e10075 ;
 }
 .magenta-bg{
   background-color: #FF8AFF;
 }
 .full-page-div {
   position: fixed;
-  top: 0;
+  top: 60px;
   left: 0;
   width: 100%;
   height: 100%;
+ 
   background-size: cover;
   z-index: 1; /* Set a lower z-index for your full-page div */
+}
+
+.spot-details {
+  padding: 5px;
+  background: #b4b3b3;
+  font-size: large;
+  font-weight: normal;
+  color: #000000;
+  border: 3px solid #000000;
+  height: 10vw;
 }
