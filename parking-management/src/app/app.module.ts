@@ -37,7 +37,8 @@ import {MatNativeDateModule} from "@angular/material/core";
     RegistrationComponent,
     FooterComponent,
     ProfileComponent,
-    BookingDialogComponent
+    BookingDialogComponent,
+
   ],
     imports: [
         BrowserModule,
