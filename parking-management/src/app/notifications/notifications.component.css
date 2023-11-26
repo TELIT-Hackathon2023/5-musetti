@@ -18,3 +18,17 @@
 .notification-title {
   font-weight: bold;
 }
+.card-body{
+  width: 100%; /* Take full width of parent */
+display: flex;
+flex-direction: column; /* Stack elements vertically */
+align-items: center; /* Center elements horizontally */
+justify-content: center; /* Center elements vertically if there's space */
+}
+.card-header{
+width: 100%; /* Take full width of parent */
+display: flex;
+flex-direction: column; /* Stack elements vertically */
+align-items: center; /* Center elements horizontally */
+justify-content: center; /* Center elements vertically if there's space */
+}
