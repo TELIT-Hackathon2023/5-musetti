@@ -1,38 +1,54 @@
 
-<div class="booking-container">
-  <h2>Book Parking Spot {{ spotId }}</h2>
-  <form (ngSubmit)="onBookSpot()">
+<div class="full-page-div">
+<div class="booking-container mt-5 container">
 
+  <div class="card" style="max-width: 370px; margin: 0 auto; margin-bottom: 20px;">
+    <div class="card-header">
+      <h4 class="card-title">Book Parking Spot {{ spotId }}</h4>
+    </div>
+      <div class="card-body">
+            <form (ngSubmit)="onBookSpot()">
 
-    <!-- Start Date Picker -->
-    <mat-form-field appearance="fill">
-      <mat-label>Start Date</mat-label>
-      <input matInput [matDatepicker]="startDatePicker" [(ngModel)]="startDate" name="startDate" required>
-      <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
-      <mat-datepicker #startDatePicker></mat-datepicker>
-    </mat-form-field>
+              <!-- Start Date Picker -->
+              <div class="form-field">
+                <mat-form-field appearance="fill">
+                  <mat-label>Start Date</mat-label>
+                  <input matInput [matDatepicker]="startDatePicker" [(ngModel)]="startDate" name="startDate" required>
+                  <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+                  <mat-datepicker #startDatePicker></mat-datepicker>
+                </mat-form-field>
+              </div>
 
-    <!-- Start Time Input -->
-    <mat-form-field appearance="fill">
-      <mat-label>Start Time (HH:mm)</mat-label>
-      <input matInput [(ngModel)]="startTime" name="startTime" required placeholder="e.g., 13:45">
-    </mat-form-field>
+              <!-- Start Time Input -->
+              <div class="form-field">
+                <mat-form-field appearance="fill">
+                  <mat-label>Start Time (HH:mm)</mat-label>
+                  <input matInput [(ngModel)]="startTime" name="startTime" required placeholder="e.g., 13:45">
+                </mat-form-field>
+              </div>
 
-    <!-- End Date Picker -->
-    <mat-form-field appearance="fill">
-      <mat-label>End Date</mat-label>
-      <input matInput [matDatepicker]="endDatePicker" [(ngModel)]="endDate" name="endDate" required>
-      <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
-      <mat-datepicker #endDatePicker></mat-datepicker>
-    </mat-form-field>
+              <!-- End Date Picker -->
+              <div class="form-field">
+                <mat-form-field appearance="fill">
+                  <mat-label>End Date</mat-label>
+                  <input matInput [matDatepicker]="endDatePicker" [(ngModel)]="endDate" name="endDate" required>
+                  <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+                  <mat-datepicker #endDatePicker></mat-datepicker>
+                </mat-form-field>
+              </div>
 
-    <!-- End Time Input -->
-    <mat-form-field appearance="fill">
-      <mat-label>End Time (HH:mm)</mat-label>
-      <input matInput [(ngModel)]="endTime" name="endTime" required placeholder="e.g., 15:30">
-    </mat-form-field>
+              <!-- End Time Input -->
+              <div class="form-field">
+                <mat-form-field appearance="fill">
+                  <mat-label>End Time (HH:mm)</mat-label>
+                  <input matInput [(ngModel)]="endTime" name="endTime" required placeholder="e.g., 15:30">
+                </mat-form-field>
+              </div>
 
-    <!-- Book Button -->
-    <button class="btn magenta-bg text-white" type="submit">Book Spot</button>
-  </form>
+              <!-- Book Button -->
+              <button class="btn magenta-bg text-white" type="submit">Book Spot</button>
+            </form>
+      </div>
+  </div>
+</div>
 </div>
