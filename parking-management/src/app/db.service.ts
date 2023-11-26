@@ -32,15 +32,15 @@ export class DbService {
     return this.firestore.collection('users').doc(userId).update(data);
   }
 
-  getParkingSpots(): Observable<ParkingSpot[]> {
-    return this.firestore.collection<ParkingSpot>('parking-spots').snapshotChanges().pipe(
-      map(actions => actions.map(a => {
-        const data = a.payload.doc.data() as ParkingSpot;
-        const id = a.payload.doc.id;
-        return { ...data,id };
-      }))
-    );
-  }
+  // getParkingSpots(): Observable<ParkingSpot[]> {
+  //   return this.firestore.collection<ParkingSpot>('parking-spots').snapshotChanges().pipe(
+  //     map(actions => actions.map(a => {
+  //       const data = a.payload.doc.data() as ParkingSpot;
+  //       const id = a.payload.doc.id;
+  //       return { ...data,id };
+  //     }))
+  //   );
+  // }
 
   parseAvailability(availabilityString: string): AvailabilityPeriod[] {
     if(availabilityString === undefined){

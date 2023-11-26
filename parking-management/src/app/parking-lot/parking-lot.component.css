@@ -19,6 +19,11 @@
   cursor: pointer;
   position: relative; /* Add position relative for absolute positioning of the space div */
 }
+
+.parking-spot.occupied {
+  background-color: #e1619d;
+}
+
 .magenta-bg{
   background-color:#e10075;
 }
@@ -51,10 +56,10 @@ row-space {
 
 .spot-details {
   padding: 5px;
+  margin-top: 10px;
   background: #e10075;
   font-size: large;
   color: white;
   font-weight: normal;
-  border-radius: 10px;
-  height: 10vw;
+  min-height: 40vw;
 }

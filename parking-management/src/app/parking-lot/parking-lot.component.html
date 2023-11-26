@@ -2,17 +2,16 @@
   <div class="parking-lot"> <!-- Add margin-top to create space -->
     <div *ngFor="let spot of parkingSpots; let i = index" class="parking-spot" [class.occupied]="spot.occupied" (mouseover)="onSelectSpot(spot)" (click)="onClickSpot(spot)">
       Spot {{ spot.id }}
-      <!-- Add a space after the first spot in each row -->
       <div *ngIf="(i % 1) === 1" class="row-space">ahoj</div>
 
     </div>
   </div>
 
-<div *ngIf="selectedSpot" class="spot-details">
-  <p>Selected Spot ID: {{ selectedSpot.id }}</p>
-  <p>Status: {{ selectedSpot.occupied ? 'Occupied' : 'Free' }}</p>
-  <div *ngIf="selectedSpot.occupied">
-
+  <div *ngIf="selectedSpot" class="spot-details">
+    <div *ngIf="selectedSpot.occupied" class="occupied">
+      <p>email: {{ selectedSpot.email }}</p>
+      <p>registration number: {{ selectedSpot.registration_num }}</p>
+    </div>
   </div>
-</div>
+
 </div>
